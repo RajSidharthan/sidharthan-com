@@ -11,7 +11,7 @@
 
     .resume-layout {
       display: grid;
-      grid-template-columns: 260px 1fr;
+      grid-template-columns: 240px 1fr;
       gap: 64px;
       align-items: start;
     }
@@ -40,17 +40,9 @@
       margin-bottom: 12px;
     }
     .skill-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-    }
-    .skill-chip {
-      font-size: 12px;
-      font-weight: 500;
-      color: var(--accent);
-      background: var(--accent-light);
-      padding: 4px 10px;
-      border-radius: 100px;
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.8;
     }
 
     /* Main content */
@@ -67,18 +59,18 @@
     }
 
     /* Job entries */
-    .job { margin-bottom: 36px; padding-bottom: 36px; border-bottom: 1px solid var(--border); }
+    .job { margin-bottom: 32px; padding-bottom: 32px; border-bottom: 1px solid var(--border); }
     .job:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
     .job-header {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
       gap: 16px;
-      margin-bottom: 6px;
+      margin-bottom: 2px;
       flex-wrap: wrap;
     }
     .job-title {
-      font-size: 17px;
+      font-size: 16px;
       font-weight: 600;
       color: var(--text);
     }
@@ -102,7 +94,7 @@
     /* Education */
     .edu { margin-bottom: 28px; padding-bottom: 28px; border-bottom: 1px solid var(--border); }
     .edu:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-    .edu-degree { font-size: 17px; font-weight: 600; margin-bottom: 4px; }
+    .edu-degree { font-size: 16px; font-weight: 600; margin-bottom: 2px; }
     .edu-school { font-size: 14px; font-weight: 500; color: var(--accent); margin-bottom: 4px; }
     .edu-detail { font-size: 13px; color: var(--text-secondary); }
 
@@ -140,27 +132,16 @@
       <!-- Sidebar -->
       <aside class="resume-sidebar">
         <div class="resume-sidebar-name">Raj Sidharthan</div>
-        <div class="resume-sidebar-title">UX Strategist · Designer<br>Design System Expert</div>
+        <div class="resume-sidebar-title">UX Strategist | Designer | Design System Expert</div>
 
         <div class="sidebar-section">
-          <h3>Core Skills</h3>
-          <div class="skill-list">
-            <span class="skill-chip">Design Systems</span>
-            <span class="skill-chip">Design Thinking</span>
-            <span class="skill-chip">Interaction Design</span>
-            <span class="skill-chip">User Research</span>
-            <span class="skill-chip">Information Architecture</span>
-            <span class="skill-chip">Journey Mapping</span>
-            <span class="skill-chip">Conceptual Design</span>
-            <span class="skill-chip">Visual Design</span>
-            <span class="skill-chip">Persona Development</span>
-            <span class="skill-chip">Storyboarding</span>
-          </div>
+          <h3>Skills</h3>
+          <div class="skill-list">Design thinking · Design Systems · Conceptual design · Interaction design · Information Architecture · Journey Mapping · Persona development · Storyboarding · User research · Visual design</div>
         </div>
 
         <div class="sidebar-section">
           <h3>Connect</h3>
-          <div class="skill-list" style="flex-direction:column;gap:8px">
+          <div style="display:flex;flex-direction:column;gap:8px">
             <a href="https://www.linkedin.com/in/rajsidharthan/" target="_blank" rel="noopener noreferrer" style="font-size:13px;color:var(--accent);font-weight:500">LinkedIn</a>
             <a href="https://dribbble.com/rajsid" target="_blank" rel="noopener noreferrer" style="font-size:13px;color:var(--accent);font-weight:500">Dribbble</a>
             <a href="https://cal.com/rajsid/30min" target="_blank" rel="noopener noreferrer" style="font-size:13px;color:var(--accent);font-weight:500">Schedule a call</a>
@@ -177,73 +158,90 @@
           <div class="job">
             <div class="job-header">
               <span class="job-title">UX Designer</span>
-              <span class="job-dates">Sep 2024 -- Present</span>
+              <span class="job-dates">September 2024 -- PRESENT</span>
             </div>
             <div class="job-company">SAP</div>
-            <p class="job-desc">Conducts UX reviews and develops guidelines for design consistency across products.</p>
+            <p class="job-desc">Contributed as a core member of SAP's Cross Application Experience UX team by conducting in-depth UX reviews across diverse products and producing detailed reports with actionable recommendations.</p>
           </div>
 
           <div class="job">
             <div class="job-header">
               <span class="job-title">UX Designer</span>
-              <span class="job-dates">Dec 2020 -- Aug 2024</span>
+              <span class="job-dates">December 2020 -- August 2024</span>
             </div>
             <div class="job-company">Udemy</div>
-            <p class="job-desc">Led growth portfolio initiative and marketing software tool development. Designed campaign management platforms, digital asset management integrations, subscription promotion systems, and end-to-end customer journey mapping for D2C subscription flows.</p>
+            <p class="job-desc">Championed the design of the company's growth portfolio initiative, revolutionizing how the marketing team promotes products to users through their website.</p>
+          </div>
+
+          <div class="job">
+            <div class="job-header">
+              <span class="job-title">UX Consultant</span>
+              <span class="job-dates">January 2013 -- Present</span>
+            </div>
+            <div class="job-company">Freshdesign</div>
+            <p class="job-desc">Established a UX design practice tailored for technology companies, where exceptional UX design is crucial to the success of their products.</p>
           </div>
 
           <div class="job">
             <div class="job-header">
               <span class="job-title">UX Designer</span>
-              <span class="job-dates">Prior role</span>
+              <span class="job-dates">February 2019 -- August 2020</span>
             </div>
             <div class="job-company">Intuit</div>
-            <p class="job-desc">Collaborated with the IDX UX team on financial institution connection flows used across Intuit's product suite (web, iOS, Android). Designed batch receipt capture and other QuickBooks expense management features.</p>
+            <p class="job-desc">Helped conceptualize and design a document management system that functions both as an independent application and seamlessly integrates within various Intuit products.</p>
           </div>
 
           <div class="job">
             <div class="job-header">
               <span class="job-title">UX Designer</span>
-              <span class="job-dates">Prior role</span>
+              <span class="job-dates">February 2015 -- December 2027</span>
             </div>
             <div class="job-company">Facebook</div>
-            <p class="job-desc">User experience design for consumer-facing products and features.</p>
+            <p class="job-desc">Worked with the Facebook Tools, Enterprise, and Data Analytics teams to create software products primarily intended for Facebook employees and partners.</p>
           </div>
 
           <div class="job">
             <div class="job-header">
-              <span class="job-title">UX Designer</span>
-              <span class="job-dates">Prior role</span>
+              <span class="job-title">Senior Manager, User Experience</span>
+              <span class="job-dates">August 2012 -- January 2013</span>
             </div>
-            <div class="job-company">eBay</div>
-            <p class="job-desc">User experience design for marketplace products and seller tools.</p>
+            <div class="job-company">EMC (DELL)</div>
+            <p class="job-desc">Spearheaded design efforts for EMC's Syncplicity (acquired by Dell) business unit, crafting a unified User Experience for a suite of mobile apps.</p>
+          </div>
+
+          <div class="job">
+            <div class="job-header">
+              <span class="job-title">User Experience Strategist</span>
+              <span class="job-dates">January 2011 -- July 2012</span>
+            </div>
+            <div class="job-company">Oracle</div>
+            <p class="job-desc">As the pioneering UX designer for a nascent Oracle Cloud team of just 30 members, I developed innovative concepts for essential cloud-based user flows.</p>
           </div>
 
           <div class="job">
             <div class="job-header">
               <span class="job-title">Principal User Experience Designer</span>
-              <span class="job-dates">2008 -- 2011</span>
+              <span class="job-dates">March 2008 -- January 2011</span>
             </div>
             <div class="job-company">Oracle</div>
-            <p class="job-desc">Led UX design for enterprise applications, establishing design standards and guiding cross-functional teams.</p>
+            <p class="job-desc">Spearheaded the design initiative to unify multiple disparate content management software products into Oracle ECM (Enterprise Content Management).</p>
           </div>
 
           <div class="job">
             <div class="job-header">
-              <span class="job-title">Senior Manager</span>
-              <span class="job-dates">Prior role</span>
+              <span class="job-title">Lead User Experience Designer</span>
+              <span class="job-dates">February 2007 -- March 2008</span>
             </div>
-            <div class="job-company">EMC / Dell</div>
-            <p class="job-desc">Design leadership for enterprise data management and storage product lines.</p>
+            <div class="job-company">eBay</div>
+            <p class="job-desc">Led the overhaul of eBay's customer support tools, aiming to drastically cut case resolution times and boost customer satisfaction.</p>
           </div>
 
           <div class="job">
             <div class="job-header">
-              <span class="job-title">Principal Consultant</span>
-              <span class="job-dates">2013 -- Present</span>
+              <span class="job-title">User Experience Designer</span>
+              <span class="job-dates">May 1998 -- January 2007</span>
             </div>
-            <div class="job-company">Freshdesign</div>
-            <p class="job-desc">Design consultancy and creator of the Freshdesign Enterprise Design System (EDS) -- an enterprise-grade design system adopted by small and medium-sized companies who need design system quality without the overhead of a dedicated in-house team.</p>
+            <div class="job-company">Various Companies</div>
           </div>
 
         </section>
@@ -252,15 +250,15 @@
           <h2 class="resume-section-title">Education</h2>
 
           <div class="edu">
-            <div class="edu-degree">Masters in Design</div>
+            <div class="edu-degree">Masters in Design (M-Des)</div>
             <div class="edu-school">Indian Institute of Technology, Mumbai</div>
-            <div class="edu-detail">1996 -- 1998 &nbsp;&middot;&nbsp; Interaction Design and Visual Communication</div>
+            <div class="edu-detail">May 1996 -- April 1998 &nbsp;&middot;&nbsp; Interaction Design and Visual Communication</div>
           </div>
 
           <div class="edu">
-            <div class="edu-degree">Bachelors in Fine Arts</div>
+            <div class="edu-degree">Bachelors in Fine Arts (BFA)</div>
             <div class="edu-school">College of Fine Arts, Kerala</div>
-            <div class="edu-detail">1990 -- 1994 &nbsp;&middot;&nbsp; Graphic Design and Advertising</div>
+            <div class="edu-detail">May 1990 -- April 1994 &nbsp;&middot;&nbsp; Graphic Design and Advertising</div>
           </div>
 
         </section>
