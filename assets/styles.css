@@ -69,7 +69,7 @@ ul   { list-style: none; }
 }
 .nav-logo {
   font-family: 'Caveat', cursive;
-  font-size: 22px;
+  font-size: 28px;
   font-weight: 700;
   letter-spacing: 0;
   color: var(--text);
@@ -83,20 +83,16 @@ ul   { list-style: none; }
   font-size: 14px;
   font-weight: 500;
   color: var(--text-secondary);
-  transition: color 150ms;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: color 150ms, border-color 150ms;
 }
-.nav-links a:hover,
-.nav-links a.active { color: var(--text); }
-.nav-cta {
-  font-size: 14px;
+.nav-links a:hover { color: var(--text); }
+.nav-links a.active {
+  color: var(--text);
   font-weight: 600;
-  color: var(--accent);
-  padding: 8px 18px;
-  border: 1.5px solid var(--accent);
-  border-radius: 100px;
-  transition: background 150ms, color 150ms;
+  border-bottom-color: var(--accent);
 }
-.nav-cta:hover { background: var(--accent); color: #fff; }
 
 /* Mobile nav toggle */
 .nav-mobile-toggle {
