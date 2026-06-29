@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raj Sidharthan -- UX Designer</title>
+  <meta name="description" content="Raj Sidharthan is a UX Strategist and Designer with over 20 years of experience. Based in the US, working with companies like SAP, Udemy, Intuit, Facebook, and eBay.">
+  <link rel="stylesheet" href="/assets/styles.css">
+  <style>
+    /* ── HERO ── */
+    .hero {
+      padding: 96px 0 80px;
+    }
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 64px;
+      align-items: center;
+    }
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--accent);
+      background: var(--accent-light);
+      padding: 5px 14px;
+      border-radius: 100px;
+      margin-bottom: 24px;
+    }
+    .hero-eyebrow::before {
+      content: '';
+      display: block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+    .hero h1 {
+      font-size: 52px;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      margin-bottom: 24px;
+      color: var(--text);
+    }
+    .hero h1 span { color: var(--accent); }
+    .hero-body {
+      font-size: 18px;
+      color: var(--text-secondary);
+      line-height: 1.75;
+      max-width: 540px;
+      margin-bottom: 36px;
+    }
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .hero-photo {
+      width: 100%;
+      aspect-ratio: 3/4;
+      border-radius: 20px;
+      overflow: hidden;
+      background: var(--accent-light);
+      position: relative;
+    }
+    .hero-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+
+    /* ── STATS ── */
+    .stats-bar {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 32px 0;
+      margin-bottom: 88px;
+    }
+    .stats-inner {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .stat { text-align: center; }
+    .stat-number {
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+    .stat-label {
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+
+    /* ── ABOUT SECTION ── */
+    .section { padding: 80px 0; }
+    .section-label {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials { padding: 88px 0; background: var(--surface); }
+    .testimonials-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    .testimonial-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      transition: box-shadow 200ms, transform 200ms;
+    }
+    .testimonial-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .testimonial-quote-mark {
+      font-size: 40px;
+      line-height: 1;
+      color: var(--accent-light);
+      font-family: Georgia, serif;
+    }
+    .testimonial-text {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.75;
+      flex: 1;
+    }
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+    }
+    .testimonial-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--accent-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+    .testimonial-role {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.3;
+    }
+    .testimonial-company {
+      font-size: 12px;
+      color: var(--text-tertiary);
+      margin-top: 2px;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-photo { max-width: 320px; margin: 0 auto; aspect-ratio: 1/1; }
+      .hero h1 { font-size: 38px; }
+      .hero-body { font-size: 16px; }
+      .stats-inner { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .hero { padding: 56px 0 48px; }
+      .hero h1 { font-size: 32px; }
+      .stats-inner { grid-template-columns: repeat(2, 1fr); }
+      .testimonials-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="site-nav" id="site-nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">Raj Sidharthan</a>
+    <ul class="nav-links">
+      <li><a href="/#about">About</a></li>
+      <li><a href="/case-studies/">Case Studies</a></li>
+      <li><a href="/resume">Resume</a></li>
+      <li><a href="/contact" class="nav-cta">Contact</a></li>
+    </ul>
+    <button class="nav-mobile-toggle" aria-label="Toggle menu" onclick="toggleMobileNav()">&#9776;</button>
+  </div>
+  <div class="nav-mobile-menu" id="mobile-menu">
+    <a href="/#about">About</a>
+    <a href="/case-studies/">Case Studies</a>
+    <a href="/resume">Resume</a>
+    <a href="/contact">Contact</a>
+  </div>
+</nav>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="about">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <div class="hero-eyebrow">Available for opportunities</div>
+          <h1>Hello, I'm<br><span>Raj Sidharthan</span></h1>
+          <p class="hero-body">With over 20 years in UX design, I have both hands-on experience and strong leadership skills. My deep knowledge of Interaction Design enables me to understand complex problems, systematically develop multiple design solutions, and pinpoint the best one that meets user needs.</p>
+          <div class="hero-actions">
+            <a href="/case-studies/" class="btn btn-primary">View Case Studies</a>
+            <a href="/contact" class="btn btn-outline">Get in Touch</a>
+          </div>
+        </div>
+        <div class="hero-photo">
+          <img src="/assets/profile.webp" alt="Raj Sidharthan">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats-bar">
+    <div class="container">
+      <div class="stats-inner">
+        <div class="stat">
+          <div class="stat-number">20+</div>
+          <div class="stat-label">Years of experience</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">8+</div>
+          <div class="stat-label">Leading companies</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">IIT</div>
+          <div class="stat-label">Masters in Design, Mumbai</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">EDS</div>
+          <div class="stat-label">Founder, Freshdesign</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="testimonials-header">
+        <div class="section-label">Recommendations</div>
+        <h2 class="section-title">What colleagues say</h2>
+      </div>
+      <div class="testimonials-grid">
+
+        <article class="testimonial-card">
+          <div class="testimonial-quote-mark">&ldquo;</div>
+          <p class="testimonial-text">Raj is an excellent designer, a good collaborator, and a great communicator. He has the ability to dive in, pick up new domains quickly, and start contributing good solutions right away. Raj is experienced and practical, allowing him to adjust his style to the needs of a project.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">&#128187;</div>
+            <div>
+              <div class="testimonial-role">VP of User Experience</div>
+              <div class="testimonial-company">Cloud technology company</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="testimonial-quote-mark">&ldquo;</div>
+          <p class="testimonial-text">Raj first amazed me by his professional yet warm demeanor. Not only was he easy to work with but fun! He is amazingly efficient in his design and development skills and equally adept in his interpersonal communication skills whether it be persuading upper management or developing confidence in interns.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">&#127775;</div>
+            <div>
+              <div class="testimonial-role">Senior UX Design Strategist</div>
+              <div class="testimonial-company">Imaging software company</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="testimonial-quote-mark">&ldquo;</div>
+          <p class="testimonial-text">Raj is an excellent User Experience designer. He is very approachable and open to input. Raj is able to distill the requirements, balance with technical constraints, simplify the user experience and gain acceptance from the stakeholders -- which is no mean skill.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">&#9881;</div>
+            <div>
+              <div class="testimonial-role">Sr Director of Engineering</div>
+              <div class="testimonial-company">Cloud technology company</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="testimonial-quote-mark">&ldquo;</div>
+          <p class="testimonial-text">Raj is a seasoned and talented User Experience designer. He has the ability to rapidly translate requirements into practical, easy to use and visually pleasing UI solutions. Raj is easy and fun to work with. He is a great asset to any Software Development team.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">&#128200;</div>
+            <div>
+              <div class="testimonial-role">VP of Products and Marketing</div>
+              <div class="testimonial-company">Information sharing ecosystem company</div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-name">Raj Sidharthan</div>
+        <p>Interested in connecting? Let's talk about projects, opportunities to collaborate, or anything design!</p>
+      </div>
+      <div class="footer-connect">
+        <h3>Connect</h3>
+        <div class="footer-social">
+          <a href="https://x.com/rajsidharthan" target="_blank" rel="noopener noreferrer" aria-label="X / Twitter">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.265 5.638L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/rajsidharthan" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://dribbble.com/rajsidharthan" target="_blank" rel="noopener noreferrer" aria-label="Dribbble">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 24C5.385 24 0 18.615 0 12S5.385 0 12 0s12 5.385 12 12-5.385 12-12 12zm10.12-10.358c-.35-.11-3.17-.953-6.384-.438 1.34 3.684 1.887 6.684 1.992 7.308a10.22 10.22 0 0 0 4.395-6.87zm-6.115 7.808c-.153-.9-.75-4.032-2.19-7.77l-.066.02c-5.79 2.015-7.86 6.025-8.048 6.39a10.16 10.16 0 0 0 6.29 2.166c1.42 0 2.77-.29 4.01-.806zm-9.89-2.893c.25-.428 3.228-5.261 8.506-6.907.435-.136.87-.257 1.297-.363-.13-.295-.257-.59-.413-.882-5.278 1.583-10.39 1.515-10.87 1.5l-.004.324a10.22 10.22 0 0 0 1.484 6.328zm-1.24-7.55c.492.005 4.785.052 9.754-1.223C13.001 7.407 11.196 5.222 11.108 5.1a10.19 10.19 0 0 0-6.233 4.907zm3.484-6.312c.116.14 1.957 2.316 3.82 5.546 3.635-1.362 5.17-3.427 5.356-3.68A10.148 10.148 0 0 0 12 1.754c-1.138 0-2.233.193-3.252.545zm7.945 1.93c-.21.28-1.895 2.477-5.666 4.01.234.475.456.963.653 1.458.076.193.148.388.217.582 3.397-.43 6.77.258 7.11.332a10.11 10.11 0 0 0-2.314-6.382z"/></svg>
+          </a>
+        </div>
+        <div class="footer-cal">
+          <a href="https://cal.com/rajsidharthan" target="_blank" rel="noopener noreferrer">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Schedule a call
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Raj Sidharthan. All Rights Reserved.
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Sticky nav shadow on scroll
+  const nav = document.getElementById('site-nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 10);
+  });
+
+  // Mobile nav toggle
+  function toggleMobileNav() {
+    document.getElementById('mobile-menu').classList.toggle('open');
+  }
+</script>
+</body>
+</html>
