@@ -17,10 +17,9 @@
       background: var(--bg);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 32px;
+      overflow: hidden;
       display: flex;
       flex-direction: column;
-      gap: 16px;
       text-decoration: none;
       color: inherit;
       transition: box-shadow 200ms, transform 200ms, border-color 200ms;
@@ -29,6 +28,27 @@
       box-shadow: var(--shadow-md);
       transform: translateY(-3px);
       border-color: var(--accent);
+    }
+    .cs-card-thumb {
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      background: var(--surface);
+    }
+    .cs-card-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      transition: transform 300ms ease;
+    }
+    .cs-card:hover .cs-card-thumb img { transform: scale(1.03); }
+    .cs-card-body {
+      padding: 28px 32px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      flex: 1;
     }
     .cs-card-tag {
       display: inline-block;
@@ -116,59 +136,83 @@
       <div class="cs-grid">
 
         <a href="/case-studies/udemy-campaign-management-platform" class="cs-card">
-          <span class="cs-card-tag">Udemy</span>
-          <div class="cs-card-title">Campaign Management Platform</div>
-          <p class="cs-card-desc">Unified fragmented marketing tools into a single platform, reducing staff attrition and accelerating onboarding for Udemy's revenue-critical promotions team.</p>
-          <span class="cs-card-link">View case study &#8594;</span>
+          <div class="cs-card-thumb"><img src="/assets/case-studies/cs-1.webp" alt="Campaign Management Platform"></div>
+          <div class="cs-card-body">
+            <span class="cs-card-tag">Udemy</span>
+            <div class="cs-card-title">Campaign Management Platform</div>
+            <p class="cs-card-desc">Unified fragmented marketing tools into a single platform, reducing staff attrition and accelerating onboarding for Udemy's revenue-critical promotions team.</p>
+            <span class="cs-card-link">View case study &#8594;</span>
+          </div>
         </a>
 
         <a href="/case-studies/bentley-systems" class="cs-card">
-          <span class="cs-card-tag">Bentley Systems</span>
-          <div class="cs-card-title">Civil Construction Mobile App</div>
-          <p class="cs-card-desc">Transformed an engineering-first desktop port into a mobile-first field experience for construction professionals, improving adoption through context-driven design.</p>
-          <span class="cs-card-link">View case study &#8594;</span>
+          <div class="cs-card-thumb"><img src="/assets/case-studies/cs-2.webp" alt="Civil Construction Mobile App"></div>
+          <div class="cs-card-body">
+            <span class="cs-card-tag">Bentley Systems</span>
+            <div class="cs-card-title">Civil Construction Mobile App</div>
+            <p class="cs-card-desc">Transformed an engineering-first desktop port into a mobile-first field experience for construction professionals, improving adoption through context-driven design.</p>
+            <span class="cs-card-link">View case study &#8594;</span>
+          </div>
         </a>
 
         <a href="/case-studies/freshdesign-eds" class="cs-card">
-          <span class="cs-card-tag">Freshdesign</span>
-          <div class="cs-card-title">Enterprise Design System</div>
-          <p class="cs-card-desc">Built an enterprise-grade design system bridging the gap for smaller organizations who need design system quality without the overhead of a dedicated in-house team.</p>
-          <span class="cs-card-link">View case study &#8594;</span>
+          <div class="cs-card-thumb"><img src="/assets/case-studies/cs-3.webp" alt="Enterprise Design System"></div>
+          <div class="cs-card-body">
+            <span class="cs-card-tag">Freshdesign</span>
+            <div class="cs-card-title">Enterprise Design System</div>
+            <p class="cs-card-desc">Built an enterprise-grade design system bridging the gap for smaller organizations who need design system quality without the overhead of a dedicated in-house team.</p>
+            <span class="cs-card-link">View case study &#8594;</span>
+          </div>
         </a>
 
         <a href="/case-studies/udemy-digital-asset-management" class="cs-card">
-          <span class="cs-card-tag">Udemy</span>
-          <div class="cs-card-title">Digital Asset Management Integration</div>
-          <p class="cs-card-desc">Replaced ad-hoc Box.net and Drive workflows with a seamless DAM integration that eliminated redundant steps and expanded tool access across the marketing org.</p>
-          <span class="cs-card-link">View case study &#8594;</span>
+          <div class="cs-card-thumb"><img src="/assets/case-studies/cs-4.webp" alt="Digital Asset Management Integration"></div>
+          <div class="cs-card-body">
+            <span class="cs-card-tag">Udemy</span>
+            <div class="cs-card-title">Digital Asset Management Integration</div>
+            <p class="cs-card-desc">Replaced ad-hoc Box.net and Drive workflows with a seamless DAM integration that eliminated redundant steps and expanded tool access across the marketing org.</p>
+            <span class="cs-card-link">View case study &#8594;</span>
+          </div>
         </a>
 
         <a href="/case-studies/udemy-subscription-promotion" class="cs-card">
-          <span class="cs-card-tag">Udemy</span>
-          <div class="cs-card-title">Subscription Promotion System</div>
-          <p class="cs-card-desc">Extended Udemy's promotions engine (influencing 56% of GMV) to cover Personal Plan subscriptions across web, mobile, email, and SMS channels.</p>
-          <span class="cs-card-link">View case study &#8594;</span>
+          <div class="cs-card-thumb"><img src="/assets/case-studies/cs-6.webp" alt="Subscription Promotion System"></div>
+          <div class="cs-card-body">
+            <span class="cs-card-tag">Udemy</span>
+            <div class="cs-card-title">Subscription Promotion System</div>
+            <p class="cs-card-desc">Extended Udemy's promotions engine (influencing 56% of GMV) to cover Personal Plan subscriptions across web, mobile, email, and SMS channels.</p>
+            <span class="cs-card-link">View case study &#8594;</span>
+          </div>
         </a>
 
         <a href="/case-studies/intuit-batch-receipt-capture" class="cs-card">
-          <span class="cs-card-tag">Intuit</span>
-          <div class="cs-card-title">Batch Receipt Capture</div>
-          <p class="cs-card-desc">Redesigned QuickBooks expense management to support batch capture, categorization, and storage of multiple receipts, eliminating one-at-a-time manual entry.</p>
-          <span class="cs-card-link">View case study &#8594;</span>
+          <div class="cs-card-thumb"><img src="/assets/case-studies/cs-7.webp" alt="Batch Receipt Capture"></div>
+          <div class="cs-card-body">
+            <span class="cs-card-tag">Intuit</span>
+            <div class="cs-card-title">Batch Receipt Capture</div>
+            <p class="cs-card-desc">Redesigned QuickBooks expense management to support batch capture, categorization, and storage of multiple receipts, eliminating one-at-a-time manual entry.</p>
+            <span class="cs-card-link">View case study &#8594;</span>
+          </div>
         </a>
 
         <a href="/case-studies/intuit-bank-connection-refresh" class="cs-card">
-          <span class="cs-card-tag">Intuit</span>
-          <div class="cs-card-title">Bank Connection Refresh</div>
-          <p class="cs-card-desc">Redesigned financial institution connection flows used across the entire Intuit product suite, consistently implemented across web, iOS, and Android.</p>
-          <span class="cs-card-link">View case study &#8594;</span>
+          <div class="cs-card-thumb"><img src="/assets/case-studies/cs-8.webp" alt="Bank Connection Refresh"></div>
+          <div class="cs-card-body">
+            <span class="cs-card-tag">Intuit</span>
+            <div class="cs-card-title">Bank Connection Refresh</div>
+            <p class="cs-card-desc">Redesigned financial institution connection flows used across the entire Intuit product suite, consistently implemented across web, iOS, and Android.</p>
+            <span class="cs-card-link">View case study &#8594;</span>
+          </div>
         </a>
 
         <a href="/case-studies/udemy-d2c-subscription-flow-mapping" class="cs-card">
-          <span class="cs-card-tag">Udemy</span>
-          <div class="cs-card-title">D2C Subscription Flow Mapping</div>
-          <p class="cs-card-desc">Comprehensive journey mapping of Udemy's direct-to-consumer subscription flow, creating a shareable reference for internal teams and surfacing revenue optimization opportunities.</p>
-          <span class="cs-card-link">View case study &#8594;</span>
+          <div class="cs-card-thumb"><img src="/assets/case-studies/cs-9.avif" alt="D2C Subscription Flow Mapping"></div>
+          <div class="cs-card-body">
+            <span class="cs-card-tag">Udemy</span>
+            <div class="cs-card-title">D2C Subscription Flow Mapping</div>
+            <p class="cs-card-desc">Comprehensive journey mapping of Udemy's direct-to-consumer subscription flow, creating a shareable reference for internal teams and surfacing revenue optimization opportunities.</p>
+            <span class="cs-card-link">View case study &#8594;</span>
+          </div>
         </a>
 
       </div>
