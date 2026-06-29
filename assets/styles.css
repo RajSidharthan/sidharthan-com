@@ -293,6 +293,16 @@ ul   { list-style: none; }
   line-height: 1.7;
 }
 
+/* ── CASE STUDY DETAIL IMAGE ── */
+.cs-detail-actions { margin-top: 40px; }
+.cs-detail-image {
+  margin-top: 48px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+.cs-detail-image img { width: 100%; height: auto; display: block; }
+
 /* ── FORM ── */
 .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 20px; }
 .form-group label {
