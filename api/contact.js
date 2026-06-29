@@ -20,7 +20,7 @@ export default async function handler(req, res) {
 
   try {
     await resend.emails.send({
-      from: 'Portfolio Contact <contact@sidharthan.com>',
+      from: 'Portfolio Contact <onboarding@resend.dev>',
       to:   'raj.sidharthan@freshdesign.com',
       replyTo: email,
       subject: `Portfolio message from ${name}`,
